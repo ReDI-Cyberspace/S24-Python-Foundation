@@ -1,4 +1,3 @@
 # Contributors
-- [ReDI-Cyberspace](https://github.com/ReDI-Cyberspace)
--Hi, this is Ashik
-- [Keviindran Ramachandran](https://github.com/keviinx)
+- [ReDI-Cyberspace](https://github.com/ashik12102/S24-Python-Foundation.git)
+- Hi, this is Ashik
