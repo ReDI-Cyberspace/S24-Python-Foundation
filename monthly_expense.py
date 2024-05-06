@@ -28,7 +28,7 @@ def salary_arrived():
 
     print("bank balance: ", bank_balance)
 
-
+#calling the function
 salary_arrived()
 
 
