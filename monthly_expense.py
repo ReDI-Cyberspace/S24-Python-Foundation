@@ -15,6 +15,7 @@ from datetime import datetime
 bank_balance = 8000
 salary = 4000
 bonus=200
+expenses_s = 2000  
 salary_drawn_count = 1
 expenses = [
     "rent",
@@ -41,17 +42,14 @@ def add_bonus():
     bank_balance += bonus
     print("Bank balance after bonus:", bank_balance)
     
-
-
 add_bonus()
 
 
 # write a function to add expenses. ask user for each type of expense and update bank balance
 def add_expenses():
-    # your code here
-
-    print("bank balance after expenses: ", bank_balance)
-
+   global bank_balance
+   bank_balance -= expenses_s
+   print("bank balance after expenses: ", bank_balance)
 
 add_expenses()
 
