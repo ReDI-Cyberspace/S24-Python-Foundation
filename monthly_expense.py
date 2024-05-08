@@ -14,6 +14,7 @@ from datetime import datetime
 
 bank_balance = 8000
 salary = 4000
+bonus=200
 salary_drawn_count = 1
 expenses = [
     "rent",
@@ -36,9 +37,10 @@ salary_arrived()
 
 # write a function to add bonus to the bank balance. take the ammount from user. can you think of any edge case?
 def add_bonus():
-    # your code here
-
-    print("bank balance after bonus: ", bank_balance)
+    global bank_balance
+    bank_balance += bonus
+    print("Bank balance after bonus:", bank_balance)
+    
 
 
 add_bonus()
