@@ -10,7 +10,8 @@ Future improvement:
 1) Use classes and objects. How the globle variable will be used in the class?
 2) Once we learn file i/o or some api or database, we will replace the manual steps
 """
-from datetime import datetime
+from datetime import datetime, timedelta
+import calendar
 
 bank_balance = 8000
 salary = 4000
@@ -56,9 +57,14 @@ add_expenses()
 
 # write a function to tell me how much i can spend per day this month
 def daily_limit():
-    # your code here
+    global bank_balance
+    today = datetime.now()
+    days_in_month = calendar.monthrange(today.year, today.month)[1]
+    remaining_days = days_in_month - today.day + 1
+    spending_limit = bank_balance / remaining_days
+    print("You can spend approximately {:.2f} per day this month.".format(spending_limit))
 
- daily_limit()
+daily_limit()
 
 
 # write a function to increae the salary by certain percentage. see how input is different from add bonus
