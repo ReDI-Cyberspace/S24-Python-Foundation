@@ -98,12 +98,17 @@ def add_new_expense():
 add_new_expense()
 
 
-# imrovment on the add expense function. we don't want use over and over. 
+# improvment on the add expense function. we don't want use over and over. 
 def add_expense_without_user_promt(expenses: dict):
-    # your code here
-
-    print(f"Expanse list: {expenses}")
-
+    global bank_balance
+    for expense_type, expense_amount in expenses.items():
+        if expense_amount < 0:
+            print(f"Expense amount for {expense_type} should be greater than or equal to zero.")
+            return
+        bank_balance -= expense_amount
+    print(f"Expense list: {expenses}")
+    print(f"Bank balance after expenses: {bank_balance}")
+   
 add_expense_without_user_promt({
     "rent": 1000,
 })
