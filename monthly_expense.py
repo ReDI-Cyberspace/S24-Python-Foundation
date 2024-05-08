@@ -10,8 +10,9 @@ Future improvement:
 1) Use classes and objects. How the globle variable will be used in the class?
 2) Once we learn file i/o or some api or database, we will replace the manual steps
 """
+from datetime import datetime
 
-bank_balance = 10000
+bank_balance = 8000
 salary = 4000
 salary_drawn_count = 1
 expenses = [
@@ -24,11 +25,12 @@ expenses = [
 
 # write a function to add salary to bank balance only if it's first of the month. also update salaris drawn count
 def salary_arrived():
-    # your code here
-
-    print("bank balance: ", bank_balance)
-
-
+    global bank_balance, salary_drawn_count
+    today = datetime.now()
+    if today.day == 1:  # Check if it's the first day of the month
+        bank_balance += salary
+        salary_drawn_count += 1
+    print("bank balance:", bank_balance)
 salary_arrived()
 
 
@@ -56,8 +58,7 @@ add_expenses()
 def daily_limit():
     # your code here
 
-
-daily_limit()
+ daily_limit()
 
 
 # write a function to increae the salary by certain percentage. see how input is different from add bonus
@@ -65,8 +66,6 @@ def salary_increase(increment_percentage: float):
     # your code here
 
     print("new salary: ", salary)
-
-
 salary_increase()
 
 
