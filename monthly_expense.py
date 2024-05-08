@@ -120,3 +120,26 @@ add_expense_without_user_promt({
 
 
 # write code to ask user which operation he wants to perform and then call only that function
+def menu():
+    print("Select an operation:")
+    print("1. Salary arrived")
+    print("2. Add bonus")
+    print("3. Add expenses")
+    print("4. Calculate daily limit")
+    print("5. Add new expense")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        salary_arrived()
+    elif choice == "2":
+        add_bonus()
+    elif choice == "3":
+        add_expenses()
+    elif choice == "4":
+        daily_limit()
+    elif choice == "5":
+        add_new_expense()
+    else:
+        print("Invalid choice.")
+menu()
