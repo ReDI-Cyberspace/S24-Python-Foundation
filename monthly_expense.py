@@ -69,10 +69,16 @@ daily_limit()
 
 # write a function to increae the salary by certain percentage. see how input is different from add bonus
 def salary_increase(increment_percentage: float):
-    # your code here
+    global salary
+    if increment_percentage < 0:
+        print("Percentage increase should be greater than or equal to zero.")
+        return
+    increase_amount = salary * increment_percentage / 100
+    salary += increase_amount
+    print("Salary after increase:", salary)
 
     print("new salary: ", salary)
-salary_increase()
+salary_increase(10)
 
 
 # write a funtion to add new type of expense.
