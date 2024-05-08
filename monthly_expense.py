@@ -83,9 +83,17 @@ salary_increase(10)
 
 # write a funtion to add new type of expense.
 def add_new_expense():
-    # your code here
-
-    print(f"Expanse list: {expenses}")
+    global bank_balance, expenses
+    new_expense_type = "health insurance"  # Specify the new expense type
+    expense_amount = 1000  # Specify the amount for health insurance
+    
+    if expense_amount < 0:
+        print("Expense amount should be greater than or equal to zero.")
+        return
+    
+    bank_balance -= expense_amount
+    expenses.append(new_expense_type)
+    print("Bank balance after adding new expense:", bank_balance)
 
 add_new_expense()
 
